@@ -138,6 +138,27 @@ section {
   color: white !important;
 }
 
+/* site services info section  */
+.services {
+  background-color: #101d2c;
+}
+
+.site-info svg {
+  color: tomato !important;
+  font-size: 3rem;
+}
+
+.site-info h3 {
+  text-transform: uppercase;
+}
+
+.site-info p,
+.site-info address {
+}
+
+#services > div > hr {
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
+}
 @media (min-width: 576px) {
   .navbar-brand {
     max-width: 10rem;
