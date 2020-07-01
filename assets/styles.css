@@ -1,9 +1,8 @@
 a {
   color: #fff !important;
 }
-
-p {
-  margin: 0;
+.border {
+  border: 2px solid salmon !important;
 }
 
 header {
@@ -129,36 +128,114 @@ section {
   color: tomato;
 }
 
-.about .btn {
+.about img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-shadow: 10px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+.about_img {
+  position: relative;
+}
+.about_img::after {
+  content: "";
+  border-left: 3px solid tomato;
+  border-top: 3px solid tomato;
+  height: 30%;
+  width: 30%;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  z-index: 999;
+}
+
+.about_img::before {
+  content: "";
+  border-right: 3px solid tomato;
+  border-bottom: 3px solid tomato;
+  height: 30%;
+  width: 30%;
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+  z-index: 999;
+}
+
+.btn2 {
   color: slategrey !important;
   width: 10rem;
 }
 
-.about .btn:hover {
+.btn2:hover {
   color: white !important;
 }
 
-/* site services info section  */
-.services {
+/* cta */
+
+.cta {
+  background: linear-gradient(rgba(16, 24, 44, 0.5), rgba(16, 24, 44, 0.95)),
+    url("./images/bg.jpg") center no-repeat fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+  color: whitesmoke;
+}
+
+/* services  */
+
+.services_box {
+  text-align: center;
+  padding: 4rem 2rem 1rem 2rem;
+  transition: all ease-in-out 0.3s;
+  background: #fff;
+  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
+.services_box:hover {
+  background: tomato;
+  transform: translateY(-2px);
+}
+.services_box:hover .services_icon img {
+  border: solid 2px whitesmoke;
+  border-radius: 50%;
+  box-shadow: 0px 0 35px 0 rgba(255, 253, 253, 0.08);
+}
+
+/* gallery  */
+.gallery_img {
+  overflow: hidden;
+  border: 2px solid white;
+}
+.gallery img {
+  transition: all 0.8s;
+}
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* staff  */
+.card.body h1 {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.card-body h6 {
+  font-size: 1rem;
+  color: tomato;
+}
+.contact_icon {
+  box-shadow: inset 1px -74px 69px -95px rgba(0, 0, 0, 0.75);
+}
+.contact_icon svg {
+  font-size: 2rem;
+  color: tomato;
+}
+
+footer {
   background-color: #101d2c;
+  color: #fff;
 }
 
-.site-info svg {
-  color: tomato !important;
-  font-size: 3rem;
-}
-
-.site-info h3 {
-  text-transform: uppercase;
-}
-
-.site-info p,
-.site-info address {
-}
-
-#services > div > hr {
-  border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
-}
 @media (min-width: 576px) {
   .navbar-brand {
     max-width: 10rem;
