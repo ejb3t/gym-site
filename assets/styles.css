@@ -27,9 +27,12 @@ header > .container {
   top: 0;
   transition: opacity 0.5;
 }
+.navbar-brand img {
+  width: 70%;
+}
 
 .navbar-brand:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .icon-menu {
@@ -81,11 +84,43 @@ header > .container {
   transition: opacity 0.5s;
   z-index: 998;
 }
+.nav-list img {
+  width: 20%;
+  margin-top: -20%;
+}
+
+.nav-list a {
+  font-size: 1.5rem;
+}
 
 .nav-list.open {
   transition: opacity 0.5s;
   opacity: 1;
   transform: scale(1);
+}
+
+.nav-list.open::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  border-left: tomato 2px solid;
+  border-top: tomato 2px solid;
+  z-index: 999;
+  width: 30%;
+  height: 30%;
+}
+
+.nav-list.open::before {
+  content: "";
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  border-right: tomato 2px solid;
+  border-bottom: tomato 2px solid;
+  z-index: 999;
+  width: 30%;
+  height: 30%;
 }
 
 .hero-text {
@@ -197,6 +232,7 @@ section {
 }
 .services_box:hover .services_icon img {
   border: solid 2px whitesmoke;
+  margin: -2px;
   border-radius: 50%;
   box-shadow: 0px 0 35px 0 rgba(255, 253, 253, 0.08);
 }
@@ -276,6 +312,9 @@ footer {
     transition: initial;
     margin: 0;
     padding: 0;
+  }
+  .nav-list-logo {
+    display: none;
   }
 
   .nav-item {
