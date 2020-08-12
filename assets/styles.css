@@ -26,13 +26,16 @@ header > .container {
 
 .navbar-brand {
   position: absolute;
+  left: 0;
   width: 100%;
   max-width: 6.25rem;
   top: 0;
   transition: opacity 0.5;
+  text-align: center;
 }
 .navbar-brand img {
   width: 70%;
+  margin: auto;
 }
 
 .navbar-brand:hover {
